@@ -1,0 +1,128 @@
+
+* {
+    box-sizing: border-box ; 
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(161, 161, 161);
+    width: 100vw;
+    max-width: 100%;
+}
+
+nav {
+    height: 77px;
+    background-color: rgb(140, 140, 140);
+}
+
+
+/*sådant som gäller "Projektsidan"*/
+    #P-Back-Wrapper {
+        width: 100vw;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1 fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "P-DONE"
+        "P-CURRENT"
+        "P-FUTURE"
+        ;
+    }
+
+.P-Status-Wrapper {
+    display: grid;
+    margin: 10px;
+    background-color: whitesmoke;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
+}
+/*de olika typerna av status. Säger enbart vilken position de har i en grid.*/
+#P-DONE{grid-area: P-DONE;}
+#P-CURRENT{grid-area: P-CURRENT;}
+#P-FUTURE{grid-area: P-FUTURE;}
+
+.P-PROJEKT {
+    margin: 5px;
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+}
+
+#HTML{
+    grid-template-areas:
+    "P-TEXT1 P-BILD1";}
+#NADA{
+    grid-template-areas:
+    "P-TEXT2 P-BILD2";}
+#RUTA3{
+    grid-template-areas:
+    "P-TEXT3 P-BILD3";}
+#RUTA4{
+    grid-template-areas:
+    "P-TEXT4 P-BILD4";}
+#RUTA5{
+    grid-template-areas:
+    "P-TEXT5 P-BILD5";}
+#RUTA6{
+    grid-template-areas:
+    "P-TEXT6 P-BILD6";}
+
+/*saker som sker alla bilder. + id för att få specifika gridarea*/
+.P-TEXT {
+    text-decoration: turquoise;
+    display: flex;
+}
+#P-TEXT1{grid-area: P-TEXT1;}
+#P-TEXT2{grid-area: P-TEXT2;}
+#P-TEXT3{grid-area: P-TEXT3;}
+#P-TEXT4{grid-area: P-TEXT4;}
+#P-TEXT5{grid-area: P-TEXT5;}
+#P-TEXT6{grid-area: P-TEXT6;}
+
+/*saker som sker alla bilder på projektsidan + id för induviduella bilder så de får en specefik gridarea*/
+.P-BILD {
+    margin: 5px;
+}
+#P-BILD1{grid-area: P-BILD1;}
+#P-BILD2{grid-area: P-BILD2;}
+#P-BILD3{grid-area: P-BILD3;}
+#P-BILD4{grid-area: P-BILD4;}
+#P-BILD5{grid-area: P-BILD5;}
+#P-BILD6{grid-area: P-BILD6;}
+
+
+
+
+/* hover som bara sker på dator men inte på telfpon */
+
+@media screen and (min-width: 800px) {
+
+    #P-DONE {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "HTML NADA"
+        ;
+    }
+    #P-CURRENT {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr  ;
+        grid-template-areas: 
+        "RUTA3 RUTA4"
+        ;
+
+    }
+    #P-FUTURE {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr  ;
+        grid-template-areas: 
+        "RUTA5 RUTA6"
+        ;
+
+    }
+
+}
+
