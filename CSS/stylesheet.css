@@ -1,4 +1,14 @@
 
+
+/*
+ 
+ P är projekt
+ H är HTML
+
+
+
+
+Allmän CSS */
 * {
     box-sizing: border-box ; 
     padding: 0px;
@@ -12,9 +22,18 @@ body {
 }
 
 nav {
-    height: 77px;
     background-color: rgb(140, 140, 140);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 77px;
 }
+
+
+
+
+
 
 
 /*sådant som gäller "Projektsidan"*/
@@ -22,7 +41,7 @@ nav {
         width: 100vw;
         max-width: 100%;
         display: grid;
-        grid-template-columns: 1 fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
         "P-DONE"
@@ -92,6 +111,38 @@ nav {
 #P-BILD4{grid-area: P-BILD4;}
 #P-BILD5{grid-area: P-BILD5;}
 #P-BILD6{grid-area: P-BILD6;}
+
+
+
+
+
+
+
+
+#H-Back-Wrapper {
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 100px 1fr;
+    grid-template-areas: 
+    "H-TITL H-TITL"
+    "H-TXT1 H-TXT1"
+    "H-TXT2 H-BILD"
+    "H-TXT2 H-TXT3"
+    ;
+}
+
+#H-Titel{grid-area: H-TITL;
+background-color: tomato;}
+#H-Text1{grid-area: H-TXT1;
+background-color: turquoise;}
+#H-Text2{grid-area: H-TXT2;
+background-color: violet;}
+#H-Text3{grid-area: H-TXT3;
+background-color: yellow;}
+#H-Bild{grid-area: H-BILD;
+height: 1000px;}
 
 
 
