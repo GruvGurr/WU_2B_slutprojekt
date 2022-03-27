@@ -96,6 +96,28 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+#HTML-Back-Wrapper {
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+
+}
+
+
+
+
+
 /* hover som bara sker på dator men inte på telfpon */
 
 @media screen and (min-width: 800px) {
