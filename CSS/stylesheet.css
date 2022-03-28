@@ -26,7 +26,7 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100px;
+    width: 77px;
     height: 77px;
 }
 
@@ -35,7 +35,7 @@ nav {
 
 
 
-
+@media screen {}
 /*sådant som gäller "Projektsidan"*/
     #P-Back-Wrapper {
         width: 100vw;
@@ -142,7 +142,7 @@ background-color: violet;}
 #H-Text3{grid-area: H-TXT3;
 background-color: yellow;}
 #H-Bild{grid-area: H-BILD;
-height: 1000px;}
+height: 100px;}
 
 
 
