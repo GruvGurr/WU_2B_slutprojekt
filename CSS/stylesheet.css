@@ -25,8 +25,8 @@ nav {
     background-color: rgb(140, 140, 140);
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100px;
+    right: 11.5px;
+    width: 77px;
     height: 77px;
 }
 
@@ -120,17 +120,21 @@ nav {
 
 
 #H-Back-Wrapper {
+    background-color: tomato;
     width: 100vw;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 100px 1fr;
+    height: 120vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 77px 1fr 100px 1fr 1fr;
     grid-template-areas: 
-    "H-TITL H-TITL"
-    "H-TXT1 H-TXT1"
-    "H-TXT2 H-BILD"
-    "H-TXT2 H-TXT3"
+    "H-TITL"
+    "H-TXT1"
+    "H-BILD"
+    "H-TXT2"
+    "H-TXT3"
     ;
+
 }
 
 #H-Titel{grid-area: H-TITL;
@@ -142,7 +146,7 @@ background-color: violet;}
 #H-Text3{grid-area: H-TXT3;
 background-color: yellow;}
 #H-Bild{grid-area: H-BILD;
-height: 1000px;}
+height: 100px;}
 
 
 
@@ -172,6 +176,20 @@ height: 1000px;}
         grid-template-areas: 
         "RUTA5 RUTA6"
         ;
+
+    }
+
+    #H-Back-Wrapper {
+        grid-template-columns: 1fr 100px;
+        grid-template-rows: 77px 1fr 100px 1fr;
+        grid-template-areas: 
+        "H-TITL H-TITL"
+        "H-TXT1 H-TXT1"
+        "H-TXT2 H-BILD"
+        "H-TXT2 H-TXT3"
+        ;
+        padding-left: 100px;
+        padding-right: 100px;
 
     }
 
