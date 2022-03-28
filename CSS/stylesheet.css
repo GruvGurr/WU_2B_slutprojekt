@@ -5,10 +5,16 @@
  P är projekt
  H är HTML
 
-
-
-
 Allmän CSS */
+
+
+/*
+##############
+# ALLMÄN CSS #
+##############
+*/
+@media screen and (min-width: 0px){
+
 * {
     box-sizing: border-box ; 
     padding: 0px;
@@ -30,11 +36,40 @@ nav {
     height: 77px;
 }
 
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: brown;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.5s;
+}
+
+.toggle #line2 {
+    opacity: 0;
+}
+.toggle #line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle #line3 {
+    transform: rotate(45deg) translate(-5px, 6px);
+}
+
+.burger {
+    background-color: aqua;
+    cursor: pointer;
+}
 
 
 
+}
 
-
+/*
+############################################
+# PROJEKT SIDANS CSS I @media:AN UDNER HÄR #
+############################################
+*/
+@media screen and (min-width: 0px){
 
 /*sådant som gäller "Projektsidan"*/
     #P-Back-Wrapper {
@@ -112,12 +147,14 @@ nav {
 #P-BILD5{grid-area: P-BILD5;}
 #P-BILD6{grid-area: P-BILD6;}
 
+}
 
-
-
-
-
-
+/*
+#########################################
+# HTML SIDANS CSS I @media:AN UDNER HÄR #
+#########################################
+*/
+@media screen and (min-width: 0px){
 
 #H-Back-Wrapper {
     background-color: tomato;
@@ -149,9 +186,13 @@ background-color: yellow;}
 height: 100px;}
 
 
+}
 
-
-/* hover som bara sker på dator men inte på telfpon */
+/* 
+#########################
+# ANPASSNING TILL DATOR #
+#########################
+*/
 
 @media screen and (min-width: 800px) {
 

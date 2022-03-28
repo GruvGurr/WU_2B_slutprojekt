@@ -1,3 +1,5 @@
+
+/*
 <script onclick="alert"></script>
 
 
@@ -11,3 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 var row = document.createElement('DIV') 
+
+*/
+
+
+const burger = document.querySelector('.hamburgare')
+
+function toggleMenu() {
+    burger.classList.toggle('toggle')
+}
+
+burger.addEventListener('click', toggleMenu)
+
