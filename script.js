@@ -1,4 +1,17 @@
 
+
+
+const hamburger = document.querySelector(".ham");  
+const navsub = document.querySelector(".nav-sub");  
+hamburger.addEventListener('click', () => {  
+ hamburger.classList.toggle("change")  
+ navsub.classList.toggle("nav-change")  
+});  
+
+
+
+
+
 /*
 <script onclick="alert"></script>
 
@@ -16,12 +29,18 @@ var row = document.createElement('DIV')
 
 */
 
-
+/*
 const burger = document.querySelector('.hamburgare')
 
 function toggleMenu() {
     burger.classList.toggle('toggle')
 }
 
-burger.addEventListener('click', toggleMenu)
+hamburger.addEventListener('click', () => {  
+    hamburger.classList.toggle("toggle")  
+   });  
+*/
+
+
+// burger.addEventListener('click', toggleMenu)
 
