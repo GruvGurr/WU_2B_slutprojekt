@@ -27,6 +27,7 @@ body {
     max-width: 100%;
 }
 
+/*
 nav {
     background-color: rgb(140, 140, 140);
     position: fixed;
@@ -60,7 +61,7 @@ nav {
     cursor: pointer;
 }
 
-
+*/
 
 }
 
@@ -69,56 +70,102 @@ nav {
 # TEST SIDANS CSS #
 ##########################
 */
-@media screen and (min-width: 0px){
-    #wrapper {
-        height: 100vh;
-        width: 100vw;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "he he he na"
-        "s1 s1 s2 s2"
-        "s1 s1 s2 s2"
-        "s1 s1 s2 s2"
-        "s3 s3 s3 s3"
-        "fo fo fo fo";
-    }
-    
-    
-    
-    header {
-        grid-area: he;
-        background-color: palegoldenrod
-    }
-    
-    #t-nav {
-        grid-area: na;
-        background-color: oldlace
-    }
-    
-    #section_1 {
-        grid-area: s1;
-        background-color: indianred
-    }
-    #section_2 {
-        grid-area: s4;
-        background-color: yellow
-    }
-    #section_3 {
-        grid-area: s3;
-        background-color: tan
-    }
-    footer {
-        grid-area: fo;
-        background-color: red;
-    }
-    
-    
-    
-    
-    
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
+    
+    nav {
+        grid-area: na;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        background-color: lightpink;
+        font-family: sans-serif;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90vh;
+        position: absolute;
+        top: -90vh;
+        right: 0px;
+        width: 200px;
+        align-items: center;
+        background-color: lightpink;
+        transition: all 0.5s;
+    }
+    
+    .nav-active {
+        transform: translateY(100vh);
+    }
+    
+    .nav-links li {
+        list-style: none;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        letter-spacing: 0.1875rem;
+        color: rgb(223, 144, 70);
+        font-weight: bold;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
+    
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(223,144,70);
+        margin: 5px;
+        border-radius: 10%;
+        transition: all 0.5s;
+    }
+    
+    .toggle #line2 {
+        opacity: 0;
+    }
+    
+    .toggle #line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .toggle #line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .burger {
+        margin-right: 3.125rem;
+        cursor: pointer;
+    }
+    
+    #grid_wrapper {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) 200px;
+        grid-template-rows: 100px 400px 400px 400px 400px 100px;
+        grid-template-areas: 
+        "he na"
+        "s1 s1"
+        "s2 s2"
+        "s3 s3"
+        "s4 s4"
+        "fo fo"
+        ;
+        
+    }
+    
+    @media print {
+        *{
+            text-transform: uppercase;
+        }
+    }
+
+
 
 
 /*
