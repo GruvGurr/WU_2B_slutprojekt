@@ -1,55 +1,21 @@
-const burger = document.querySelector('.burger')
-const nav = document.querySelector('.nav-links')
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  } 
 
-function toggleMenu() {
-    nav.classList.toggle('nav-active')
-    burger.classList.toggle('toggle')
-}
-
-burger.addEventListener('click', toggleMenu)
-
-
-/*
-const hamburger = document.querySelector(".ham");  
-const navsub = document.querySelector(".nav-sub");  
-hamburger.addEventListener('click', () => {  
- hamburger.classList.toggle("change")  
- navsub.classList.toggle("nav-change")  
-});  
-
-
-*/
-
-
-/*
-<script onclick="alert"></script>
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var div = document.createElement('div');
-    div.id = 'container';
-    div.innerHTML = 'Hi there!';
-    div.className = 'border pad';
- 
-    document.body.appendChild(div);
-}, false);
-
-var row = document.createElement('DIV') 
-
-*/
-
-/*
-const burger = document.querySelector('.hamburgare')
-
-function toggleMenu() {
-    burger.classList.toggle('toggle')
-}
-
-hamburger.addEventListener('click', () => {  
-    hamburger.classList.toggle("toggle")  
-   });  
-*/
-
-
-// burger.addEventListener('click', toggleMenu)
 

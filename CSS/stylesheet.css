@@ -5,7 +5,7 @@
  P är projekt
  H är HTML
 
-Allmän CSS */
+*/
 
 
 /*
@@ -22,46 +22,77 @@ Allmän CSS */
 }
 
 body {
-    background-color: rgb(161, 161, 161);
+    background-image: url(../IMG/kod.jpg);
+    background-size: cover; 
     width: 100vw;
     max-width: 100%;
 }
 
-/*
+h1 {
+    grid-area: H1TITL;
+    justify-self: center;
+    color: aqua;
+} 
+
+ /* Koden till naven */
 nav {
-    background-color: rgb(140, 140, 140);
+    background-color: rgb(99, 99, 99);
     position: fixed;
-    top: 0;
+    top: 11.5px;
     right: 11.5px;
     width: 77px;
-    height: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: brown;
-    margin: 5px;
-    border-radius: 10%;
-    transition: all 0.5s;
-}
-
-.toggle #line2 {
-    opacity: 0;
-}
-.toggle #line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle #line3 {
-    transform: rotate(45deg) translate(-5px, 6px);
-}
-
-.burger {
-    background-color: aqua;
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgb(0, 97, 153);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
     cursor: pointer;
-}
+    width: 77px;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(3, 107, 192);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 77px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(221, 221, 221)}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 
 
-*/
+
+    
 
 }
 
@@ -69,102 +100,7 @@ nav {
 ##########################
 # TEST SIDANS CSS #
 ##########################
-*/
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    nav {
-        grid-area: na;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        
-        background-color: lightpink;
-        font-family: sans-serif;
-    }
-    
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 90vh;
-        position: absolute;
-        top: -90vh;
-        right: 0px;
-        width: 200px;
-        align-items: center;
-        background-color: lightpink;
-        transition: all 0.5s;
-    }
-    
-    .nav-active {
-        transform: translateY(100vh);
-    }
-    
-    .nav-links li {
-        list-style: none;
-    }
-    
-    .nav-links a {
-        text-decoration: none;
-        letter-spacing: 0.1875rem;
-        color: rgb(223, 144, 70);
-        font-weight: bold;
-        font-size: 1.25rem;
-        text-transform: uppercase;
-    }
-    
-    .burger div {
-        width: 25px;
-        height: 3px;
-        background-color: rgb(223,144,70);
-        margin: 5px;
-        border-radius: 10%;
-        transition: all 0.5s;
-    }
-    
-    .toggle #line2 {
-        opacity: 0;
-    }
-    
-    .toggle #line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    
-    .toggle #line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-    
-    .burger {
-        margin-right: 3.125rem;
-        cursor: pointer;
-    }
-    
-    #grid_wrapper {
-        display: grid;
-        grid-template-columns: minmax(300px, 1fr) 200px;
-        grid-template-rows: 100px 400px 400px 400px 400px 100px;
-        grid-template-areas: 
-        "he na"
-        "s1 s1"
-        "s2 s2"
-        "s3 s3"
-        "s4 s4"
-        "fo fo"
-        ;
-        
-    }
-    
-    @media print {
-        *{
-            text-transform: uppercase;
-        }
-    }
-
+*/ 
 
 
 
@@ -261,15 +197,15 @@ nav {
 @media screen and (min-width: 0px){
 
 #H-Back-Wrapper {
-    background-color: tomato;
+    background-color: none;
     width: 100vw;
     max-width: 100%;
     display: grid;
-    height: 120vh;
+    height: 200vh;
     grid-template-columns: 1fr;
     grid-template-rows: 77px 1fr 100px 1fr 1fr;
     grid-template-areas: 
-    "H-TITL"
+    "H1TITL"
     "H-TXT1"
     "H-BILD"
     "H-TXT2"
@@ -278,16 +214,16 @@ nav {
 
 }
 
-#H-Titel{grid-area: H-TITL;
-background-color: tomato;}
 #H-Text1{grid-area: H-TXT1;
-background-color: turquoise;}
+background-color: rgb(133, 133, 133);}
 #H-Text2{grid-area: H-TXT2;
-background-color: violet;}
+background-color: rgb(133, 133, 133);}
 #H-Text3{grid-area: H-TXT3;
-background-color: yellow;}
+background-color: rgb(133, 133, 133);
+padding: 20px;}
 #H-Bild{grid-area: H-BILD;
-height: 100px;}
+width: 100%;
+justify-self: center;}
 
 
 }
@@ -325,10 +261,10 @@ height: 100px;}
     }
 
     #H-Back-Wrapper {
-        grid-template-columns: 1fr 100px;
-        grid-template-rows: 77px 1fr 100px 1fr;
+        grid-template-columns: 21fr 13fr;
+        grid-template-rows: 77px 1fr 1fr 1fr;
         grid-template-areas: 
-        "H-TITL H-TITL"
+        "H1TITL H1TITL"
         "H-TXT1 H-TXT1"
         "H-TXT2 H-BILD"
         "H-TXT2 H-TXT3"
