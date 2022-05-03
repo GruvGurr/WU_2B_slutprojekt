@@ -3,7 +3,6 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-  
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -19,3 +18,6 @@ function myFunction() {
   } 
 
 
+function triangelDrama() {
+    document.getElementById("riseDown").classList.toggle("show");
+}

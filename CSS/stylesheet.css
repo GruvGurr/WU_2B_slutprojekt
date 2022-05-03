@@ -1,10 +1,8 @@
 
 
 /*
- 
  P är projekt
  H är HTML
-
 */
 
 
@@ -32,6 +30,11 @@ h1 {
     grid-area: H1TITL;
     justify-self: center;
     color: aqua;
+    background-color: rgb(99, 99, 99);
+    width: 80%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
 } 
 
  /* Koden till naven */
@@ -97,17 +100,37 @@ nav {
 }
 
 /*
-##########################
+###################
 # TEST SIDANS CSS #
-##########################
+###################
 */ 
 
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 77px solid whitesmoke;
+    border-left: 77px solid transparent;  
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.riseDown-insida {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 77px;
+    z-index: 1;
+  }
 
 
 /*
-############################################
-# PROJEKT SIDANS CSS I @media:AN UDNER HÄR #
-############################################
+######################
+# PROJEKT SIDANS CSS #
+######################
 */
 @media screen and (min-width: 0px){
 
@@ -189,11 +212,9 @@ nav {
 
 }
 
-/*
-#########################################
-# HTML SIDANS CSS I @media:AN UDNER HÄR #
-#########################################
-*/
+/*#################
+# HTML SIDANS CSS #
+#################*/
 @media screen and (min-width: 0px){
 
 #H-Back-Wrapper {
@@ -228,11 +249,9 @@ justify-self: center;}
 
 }
 
-/* 
-#########################
+/*#######################
 # ANPASSNING TILL DATOR #
-#########################
-*/
+#######################*/
 
 @media screen and (min-width: 800px) {
 
