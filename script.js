@@ -19,5 +19,5 @@ function myFunction() {
 
 
 function triangelDrama() {
-    document.getElementById("riseDown").classList.toggle("show");
+  document.getElementById("riseDown").classList.toggle("show");
 }

@@ -106,6 +106,9 @@ nav {
 */ 
 
 .arrow {
+    position: fixed;
+    top: 0px;
+    right: 0px;
     width: 0;
     height: 0;
     border-top: 77px solid whitesmoke;
@@ -244,6 +247,7 @@ background-color: rgb(133, 133, 133);
 padding: 20px;}
 #H-Bild{grid-area: H-BILD;
 width: 100%;
+display: block;
 justify-self: center;}
 
 
