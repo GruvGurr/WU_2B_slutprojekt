@@ -1,12 +1,9 @@
-
-
 /*
  
  P är projekt
  H är HTML
 
 */
-
 
 /*
 ##############
@@ -34,7 +31,17 @@ h1 {
     color: aqua;
 } 
 
- /* Koden till naven */
+.text {
+    padding: 10px;
+    font-size: large;
+}
+
+}
+
+ /* 
+ Koden till naven 
+ */
+ @media screen and (min-width: 0px){
 nav {
     background-color: rgb(99, 99, 99);
     position: fixed;
@@ -91,9 +98,6 @@ nav {
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;} 
 
-
-    
-
 }
 
 /*
@@ -112,18 +116,18 @@ nav {
 @media screen and (min-width: 0px){
 
 /*sådant som gäller "Projektsidan"*/
-    #P-Back-Wrapper {
-        width: 100vw;
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "P-DONE"
-        "P-CURRENT"
-        "P-FUTURE"
-        ;
-    }
+#P-Back-Wrapper {
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "P-DONE"
+    "P-CURRENT"
+    "P-FUTURE"
+    ;
+}
 
 .P-Status-Wrapper {
     display: grid;
@@ -189,6 +193,25 @@ nav {
 
 }
 
+
+
+
+
+
+#P-flex_back {
+    display: flex;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: aqua;
+    padding: 100px;
+    height: 200vh;
+    
+    
+}
+
+
+
+
 /*
 #########################################
 # HTML SIDANS CSS I @media:AN UDNER HÄR #
@@ -222,8 +245,10 @@ background-color: rgb(133, 133, 133);}
 background-color: rgb(133, 133, 133);
 padding: 20px;}
 #H-Bild{grid-area: H-BILD;
+background-color: rgb(133, 133, 133);
 width: 100%;
-justify-self: center;}
+justify-self: center;
+padding: 10px;}
 
 
 }
